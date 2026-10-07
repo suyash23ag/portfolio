@@ -1,0 +1,25 @@
+.music-dock{position:fixed;right:20px;bottom:20px;z-index:600;width:300px;max-width:calc(100vw - 24px);color:#e8edf5;font-family:'DM Sans',sans-serif;pointer-events:auto}
+.music-pill{display:flex;align-items:center;background:#111925ed;border:1px solid #aebddc38;border-radius:40px;box-shadow:0 8px 30px #0003;backdrop-filter:blur(18px);padding:5px;gap:3px}
+.music-main{display:flex;align-items:center;gap:10px;flex:1;min-width:0;padding:6px 3px 6px 6px;background:none;border:0;color:inherit;text-align:left;border-radius:30px}
+.music-glyph{height:32px;width:32px;display:grid;place-items:center;border-radius:50%;background:#ffffff0b;color:#a8bcdd;flex-shrink:0}
+.music-copy{display:flex;flex-direction:column;gap:3px;flex:1}.music-copy strong{font-size:11px;font-weight:500;white-space:nowrap}.music-copy strong>span{font-weight:400;color:#9aabc2;font-size:9px}.music-status{font:8px/1.5 monospace;color:#adbbce;letter-spacing:.2px}
+.music-options-toggle{display:grid;place-items:center;border:0;border-left:1px solid #b9cde322;background:none;color:#aebed8;height:30px;width:31px;border-radius:0 30px 30px 0}.music-main:hover .music-glyph{background:#d5e9c91b;color:#d5e9c9}.music-dock button:focus-visible,.music-dock a:focus-visible,.music-dock input:focus-visible{outline:2px solid #b9d9fa;outline-offset:3px}
+.music-bars{display:flex;align-items:center;gap:2px;height:20px;padding:0 4px}.music-bars i{display:block;width:2px;height:3px;background:#9fc8ba;border-radius:2px}.is-playing .music-bars i{animation:music-wave .8s ease-in-out infinite alternate}.is-playing .music-bars i:nth-child(2){animation-delay:-.4s}.is-playing .music-bars i:nth-child(3){animation-delay:-.2s}.is-playing .music-bars i:nth-child(4){animation-delay:-.6s}.is-playing .music-glyph{color:#c9edb4}.is-playing .music-status{color:#c9edb4}.music-time{font:8px monospace;color:#97a7bd;min-width:27px}
+.music-panel{position:absolute;bottom:65px;right:0;width:340px;max-width:calc(100vw - 24px);border:1px solid #aebddc38;border-radius:16px;padding:16px;background:#141d2afa;box-shadow:0 18px 50px #0006}.music-panel[hidden]{display:none}.music-panel-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:15px}.music-panel-heading>span{font:8px monospace;letter-spacing:1px;color:#a7b9ce}.music-panel-heading>a{display:flex;align-items:center;gap:5px;font-size:10px;color:#c8dcf4}.music-panel iframe{width:100%;height:166px;border:0;border-radius:8px;background:#fff}.music-volume{display:flex;align-items:center;gap:12px;margin-top:16px;font-size:10px;color:#c2cce0}.music-volume input{min-width:0;width:100%;accent-color:#a5cbaa;cursor:pointer}.music-volume output{min-width:30px;text-align:right;font:9px monospace}.music-credit{font-size:9px;color:#8f9fb5;margin:13px 0 0}.music-error{font-size:11px;line-height:1.6;color:#dccdb8}.music-error button{background:none;border:1px solid #aab8ce66;padding:6px 10px;border-radius:6px;font-size:10px}
+.footer{padding-bottom:95px}
+@keyframes music-wave{from{height:3px}to{height:17px}}
+@media(max-width:600px){.music-dock{right:12px;bottom:12px;width:280px}.music-panel{bottom:62px}.welcome-hint{max-width:250px;display:block;line-height:1.8;margin-inline:auto}.welcome-bottom{margin-bottom:95px!important}}
+@media(prefers-reduced-motion:reduce){.is-playing .music-bars i{animation:none;height:10px}}
+/* Keep the official player loaded while its options are collapsed. */
+.music-panel[data-open="false"]{visibility:hidden;opacity:0;pointer-events:none;transform:translateY(8px)}
+.music-panel[data-open="true"]{visibility:visible;opacity:1;transform:none}
+/* Compact dock; full controls remain available in the expanded panel. */
+.music-dock{width:228px;right:16px;bottom:16px}
+.music-pill{padding:3px;gap:0}
+.music-main{padding:3px 1px 3px 3px;gap:7px;min-height:38px}
+.music-glyph{width:27px;height:27px}.music-glyph svg{width:15px;height:15px}
+.music-copy{gap:1px}.music-copy strong{font-size:10px}.music-copy strong>span{font-size:8px}.music-status{font-size:7px;letter-spacing:0}
+.music-bars{gap:2px;padding:0 3px;height:16px}.music-bars i{width:1.5px}
+.music-time{font-size:7px;min-width:24px}.music-options-toggle{width:28px;height:36px}
+.music-panel{bottom:54px}
+@media(max-width:600px){.music-dock{width:212px;right:12px;bottom:12px}.music-main{min-height:38px}.music-options-toggle{width:30px;min-height:38px}}

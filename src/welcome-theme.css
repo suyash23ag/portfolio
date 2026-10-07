@@ -1,0 +1,25 @@
+/* The opening scene uses the same palette, typography and controls as the portfolio. */
+:root{--portfolio-ink:#10151f;--portfolio-text:#edf0f7;--portfolio-lavender:#b8c8ff;--portfolio-mint:#c7f0b3;--portfolio-muted:#a7b5cd;--portfolio-line:#b8c8ff20}
+.welcome{background:var(--portfolio-ink);color:var(--portfolio-text);font-family:'DM Sans',sans-serif}
+.welcome-image{opacity:.38;filter:saturate(.5);object-position:center}
+.welcome-shade{background:linear-gradient(180deg,#10151ff5 0%,#10151fb3 36%,#10151f4d 72%,#10151fe8 100%),radial-gradient(ellipse at 50% 35%,#b8c8ff12,transparent 60%)}
+.welcome-top{height:80px;flex-shrink:0;align-items:center;padding:0 max(32px,calc((100vw - 1240px)/2));border-bottom:1px solid var(--portfolio-line);color:var(--portfolio-muted);font-size:9px;letter-spacing:1.6px}
+.welcome-brand{font-family:'DM Sans',sans-serif;font-size:37px;line-height:1;letter-spacing:-4px;font-weight:800;color:var(--portfolio-text)}
+.welcome-brand>span{color:var(--portfolio-lavender)}
+.welcome-composition .welcome-kicker{color:var(--portfolio-muted);font-size:9px;font-weight:500;letter-spacing:2px}
+.welcome-composition #welcome-description{color:var(--portfolio-text);font-family:'DM Sans',sans-serif;font-size:15px;font-weight:400;line-height:1.8;text-shadow:none}
+.welcome-bottom::before{background:radial-gradient(ellipse,#10151fa6,transparent 72%)}
+.welcome-composition .enter-portfolio{background:var(--portfolio-mint);border:1px solid transparent;color:#172016;border-radius:30px;padding:17px 25px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:700;gap:24px;box-shadow:none;transition:background .2s,transform .2s}
+.welcome-composition .enter-portfolio:hover{background:#defbcf;transform:translateY(-2px)}
+.welcome-composition .enter-portfolio:focus-visible{outline:2px solid var(--portfolio-lavender);outline-offset:5px}
+.cloud-name-fallback{color:var(--portfolio-lavender)}
+.cloud-name-sentence .cloud-name-fallback{color:var(--portfolio-mint)}
+.section-transition{background:var(--portfolio-ink)}
+.section-transition>img{opacity:.3;filter:saturate(.5)}
+.transition-tint{background:linear-gradient(#10151fe6,#10151f80)}
+.transition-content>strong{color:var(--portfolio-text)}
+.transition-content>strong>span,.pixel-letter.warm{color:var(--portfolio-mint)}
+.primary-button{background:var(--portfolio-mint)}
+.hero .accent,.wordmark span{color:var(--portfolio-lavender)}
+@media(max-width:700px){.welcome-top{height:72px;padding-inline:20px;font-size:7px}.welcome-composition .welcome-kicker{font-size:7px;letter-spacing:1.5px}.welcome-composition #welcome-description{font-size:13px}}
+@media(prefers-reduced-motion:reduce){.welcome-composition .enter-portfolio{transition:none}.welcome-composition .enter-portfolio:hover{transform:none}}

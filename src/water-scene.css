@@ -1,0 +1,9 @@
+.water-scene{position:relative;height:470px;width:100%;isolation:isolate;border-radius:38px;background:radial-gradient(ellipse at 50% 52%,#16253c44,transparent 68%)}
+.water-scene-heading{position:absolute;top:20px;left:28px;right:28px;display:flex;justify-content:space-between;color:#8195b0;font:8px monospace;letter-spacing:1.7px;pointer-events:none;z-index:1}
+.water-surface{position:absolute;inset:0;padding:0;border:0;border-radius:38px;background:transparent;width:100%;height:100%;cursor:crosshair;touch-action:pan-y}
+.water-surface canvas{display:block;width:100%;height:100%}.water-surface:focus-visible{outline:1px solid #badde688;outline-offset:0}
+.water-scene-caption{position:absolute;bottom:22px;left:0;right:0;display:flex;justify-content:center;align-items:center;gap:8px;font:7px monospace;letter-spacing:1.6px;color:#8fa9bb;pointer-events:none}
+.water-dot{width:4px;height:4px;background:#b6e8dc;border-radius:50%;box-shadow:0 0 10px #b6e8dc66}
+@media(min-width:1500px){.water-scene{height:520px}}
+@media(max-width:1000px){.water-scene{height:410px}}
+@media(max-width:700px){.water-scene{height:345px}.water-scene-heading{left:20px;right:20px;font-size:7px}.water-scene-caption{font-size:6px}}
